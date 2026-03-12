@@ -1,0 +1,64 @@
+.tarefabutton{
+    background-color: rgb(0, 119, 255);
+    border: none;
+    border-radius: 20px;
+    color: white;
+}
+
+
+header{
+    border-bottom: 2px groove;
+    background-color: rgb(233, 238, 205);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+        
+}
+
+
+.ColunasStatus{
+    display: flex;
+    justify-content: space-around;
+    border: 20px;
+    gap: 30px;
+    margin: 2%;
+    
+}
+
+#Pendente{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: aqua;
+    border-radius: 10px;
+    flex: 1;    
+    
+}
+
+#Andamento{
+    padding: 15px;
+    background-color: aqua;
+    border-radius: 10px;
+    flex: 1;
+    
+}
+
+#Realizado{
+    padding: 15px;
+    background-color: aqua;
+    border-radius: 10px;
+    flex: 1;
+    
+    
+}
+
+.Contagem{
+    display: flex;
+    justify-content: right;
+    
+    background-color: azure;
+    
+    
+}
