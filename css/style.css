@@ -1,14 +1,47 @@
-.tarefabutton{
-    background-color: rgb(0, 119, 255);
-    border: none;
-    border-radius: 20px;
-    color: white;
+:root{
+    --status-background:#ffffff;
+    --Contagem-Status:#d4d4d4;
+    --Text: #000000;
+    --Button: #3c91f3;
+    --Background-Header: #ffffff;
+    --Gray: #797a7a;
+    --Pendente:#bb3131;
+    --Em-Andamento: #c5bc3f;
+    --Finalizado: #6fd46f;
+
+}
+body{
+    background-color: rgba(208, 230, 248, 0.692);
 }
 
+#tarefabutton{
+    background-color: var(--Button);
+    border: none;
+    border-radius: 15px;
+    color: white;
+    padding: 12px;
+    margin-right: 10%;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    margin-top: 4px;
+
+    
+}
+
+.InfoTarefas{
+    background-color: rgb(5, 118, 138);
+}
+
+.InfoTarefas h1{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
 
 header{
     border-bottom: 2px groove;
-    background-color: rgb(233, 238, 205);
+    border-color: var(--Background-Header);
+    background-color: var(--Background-Header);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,46 +52,133 @@ header{
 
 .ColunasStatus{
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
-    border: 20px;
-    gap: 30px;
-    margin: 2%;
+    background-color: transparent;
+    padding: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+    gap: 20px;
+    
+    
     
 }
 
-#Pendente{
+.ListaTarefa{
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    background-color: transparent;
+    padding: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+    gap: 20px;
+
+}
+
+.Item{
+    border: dotted 2px var(--Contagem-Status);
+    color: var(--Gray);
+    border-radius: 20px;
+    padding: 60px;
+    padding-left: 10%;
+    padding-right: 13%;
+    background-color: transparent;
+}
+
+.Status{
+    background-color: var(--status-background);
+    flex: 1;
+    padding: 20px;
+    margin-left: 20px;
+    margin-right:20px;
+    border-radius: 10px;
+    display: flex;
     justify-content: space-between;
-    padding: 15px;
-    background-color: aqua;
-    border-radius: 10px;
-    flex: 1;    
-    
-}
+    align-items: center;
 
-#Andamento{
-    padding: 15px;
-    background-color: aqua;
-    border-radius: 10px;
-    flex: 1;
-    
-}
 
-#Realizado{
-    padding: 15px;
-    background-color: aqua;
-    border-radius: 10px;
-    flex: 1;
-    
-    
 }
 
 .Contagem{
+    margin-left: auto;
     display: flex;
-    justify-content: right;
+    align-items: center;
+    background-color: var(--Contagem-Status);
+    color: var(--Gray);
+    border-radius: 20px;
+    padding: 5px 10px;
+   
+
+}
+
+.Status h2{
+    margin: 0;
+    font-size: 1rem;
+}
+
+.Icone{
+  margin-right: 10px;  
+  margin-top: -3px;
+  display: flex;
+  justify-content: center;
+  height: 25px;
+  width: 25px;
+}
+
+#Andamento{
+    border-top: solid 5px var(--Em-Andamento);
     
-    background-color: azure;
+}
+#Pendente{
+    border-top: solid 5px var(--Pendente);
+    
+}
+#Finalizado{
+    border-top: solid 5px var(--Finalizado);
+    
+}
+
+#Modal-Criar{
+   border: none;
+   border-radius: 20px;
+   padding: 0;
+   background: transparent;
+  
+    
+}
+
+.Modal{
+    width: 350px;            
+    padding: 30px;         
+    background-color: white; 
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;               
+    text-align: left;
+
     
     
+}
+
+#Modal-Criar::backdrop{ /*Pesquisar sobre backdrop*/
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+.Form input, .Form textarea{
+    width: 100%;
+    padding: 12px;
+    background-color: #6fd46f;
+    box-sizing: border-box; /*pesquisa*/
+    border-radius: 10px;
+    border: solid 1px var(--Contagem-Status)
+    
+
+} 
+
+.Nome{
+    display: flex;
+    justify-content: flex-start;
 }

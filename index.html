@@ -1,36 +1,85 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <title>To-do List</title>
-</head>
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/script.js" defer></script>
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+        <title>To-do List</title>
+    </head>
 
-<body>
-   <header>
-    <h1>Tarefas</h1>
-    <p>x Tarefas</p>
-    <button class="tarefabutton">Nova Tarefa</button>
-</header>
-<main class="ColunasStatus"> <!--div pai para facilitar na manipulação depois-->
-    <section id="Pendente"><h2>Pendente</h2>
-        <h3 class="Contagem">1</h3>
-        <!-- <ul></ul> -->
-    </section>
+    <body>
 
-    <section id="Andamento"><h2>Em Andamento</h2>
-        <h3 class="Contagem">1</h3>
-        <!-- <ul></ul> -->
-    </section>
+    <header> 
+        <div class="InfoTarefas">
+        <h1><strong>Tarefas</strong></h1>
+        <p>x Tarefas</p>
+    </div>
 
-    <section id="Realizado"><h2>Finalizado</h2>
-        <h3 class="Contagem">1</h3>
-        <!-- <ul></ul> -->
-    </section>
+        <button id="tarefabutton"> <!--Botão CRIAR TAREFA-->
+        <img src="img/add-button.png" alt="botão de adicionar tarefa" width="30px" >
+        Nova Tarefa</button>
+    </header>
 
-</main>
-</body>
-</html>
+    <main> 
+        <section class="ColunasStatus">
+    <div class="Status" id="Pendente">
+            <img src="img/list.png" alt="" width="20px" height="20px" class="Icone">
+            <h2>Pendente</h2>
+            <h3 class="Contagem">1</h3>
+            <!-- <ul></ul> -->
+    </div>
+        
+        <div class="Status" id="Andamento"><h2>Em Andamento</h2>
+            <h3 class="Contagem">1</h3>
+            <!-- <ul></ul> -->
+        </div>
+
+        <div class="Status" id="Finalizado"><h2>Finalizado</h2>
+            <h3 class="Contagem">1</h3>
+            <!-- <ul></ul> -->
+        </div>
+        </section>
+        
+
+            <section class="ListaTarefa">
+                <div class="Item">Nenhuma Tarefa</div>
+                <div class="Item">Nenhuma Tarefa</div>
+                <div class="Item">Nenhuma Tarefa</div>
+
+            </section>
+    </main>
+
+        <dialog id="Modal-Criar"> <!--MODAL DE CRIAÇÃO-->
+            <div class="Modal">
+            <h2>Nova Tarefa</h2>
+            <br>
+            <form method="dialog">
+                <div class="Form">
+                    <label class="Nome">Nome da Tarefa</label>
+                    <input type="text" id="nome" required>
+                </div>
+                <br>
+                <div class="Form">
+                <label class="Nome">Data de Término da Tarefa</label>
+                <input type="date" id="date">
+                </div>
+                <br>
+                <div class="Form">
+                    <label class="Nome">Descrião</label>
+                    <input type="text" id="descricao" placeholder="">
+                </div>
+                <br>
+                <div class="buttons">
+                    <button type="submit">Criar</button>
+                    <button type="reset" id="fechar">Cancelar</button>
+                </div>
+                
+            </form>
+        </div>
+        </dialog>
+
+    </body>
+    </html>
